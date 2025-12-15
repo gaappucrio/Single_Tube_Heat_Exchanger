@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.animation import FuncAnimation
 from seaborn.palettes import blend_palette
-import io
+import tempfile
 
 
 def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
@@ -100,6 +100,7 @@ if st.button('Run Simulation'):
     run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt)
 elif st.button('Run standard example'):
     run_simulation(10, 0.1, 10, 3, 4180, 995.61, 400, 300, 10000, 210, 1)
+
 
 
 
