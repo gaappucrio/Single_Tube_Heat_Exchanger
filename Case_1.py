@@ -49,13 +49,13 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     ani = FuncAnimation(fig_animacao, update_plot, frames=df_Temp.shape[0], repeat=False)
 
     # Salvar a animação como gif
-    save = ani.save('Temperature Variation - Case I.gif', writer='pillow', fps=10)
+    save = ani.save('Temperature_Variation_Case_I.gif', writer='pillow', fps=10)
     
     # Exibindo a simulação
     with st.expander("Real-time Simulation Visualization for the Fluid (Click here to view)"):
         st.write('Temperature variation of the fluid passing through the heat exchanger over time and along its length.')
         st.write('Time is shown above the GIF in seconds. Temperatures in Kelvin are represented on the variable scale of the y-axis. The heat exchanger length is shown in meters on the GIF’s x-axis.')
-        st.image('Temperature Variation – Case I.gif')
+        st.image('Temperature_Variation_CaseI.gif')
 
     #Exibindo o gráfico de variação da temperatura ao longo do comprimento em regime permanente
     plt.figure(fig_permanente)
@@ -94,3 +94,4 @@ if st.button('Run Simulation'):
     run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt)
 elif st.button('Run standard example'):
     run_simulation(10, 0.1, 10, 3, 4180, 995.61, 400, 300, 10000, 210, 1)
+
